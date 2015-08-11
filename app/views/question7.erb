@@ -1,0 +1,41 @@
+<style>
+
+	/**** YOU MAY ADD OR MODIFY CSS BELOW ****/
+		.question h2 {
+			background-color: #ddd;
+			padding: 10px;
+			color: black;	
+		}
+	/**** STOP MODIFYING HERE. ****/
+
+</style>
+
+<p>In the box below is an H2 element. Using HTML5 attributes and jQuery, set the box so that you can edit the content of it in place. The H2 should revert back to its last value if it is left empty.</p>
+
+<div class="question">
+	<h2 id="h2_contents" contenteditable="true">Edit Me!</h2>
+</div>
+
+<script>
+
+$(function() {
+	/**** YOU MAY MODIFY THE CODE BELOW ****/
+
+	// Get the default H2 contents as the initial "last value"
+	var last_value = $("#h2_contents").text();
+
+
+	$("#h2_contents").focusout(function() {
+  		// alert("Updated value is: " + $("#h2_contents").text());
+
+  		if ( $("#h2_contents").text() == "") // if its empty, set text to "last_value"
+  			document.querySelector("#h2_contents").innerHTML = last_value;  
+  		else 					// if its not blank, update the new contents to be "last value"
+  			last_value = $("#h2_contents").text();
+	});
+
+	/**** STOP MODIFYING HERE. ****/
+});
+
+</script>
+

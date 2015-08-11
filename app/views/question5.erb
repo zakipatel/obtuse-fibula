@@ -1,0 +1,44 @@
+<p>There is a function written that returns the largest number in an array. The code doesn't seem to be running properly, since the first test is failing. Fix the code such that all tests pass.</p>
+<p>Edit the page source to begin.</p>
+
+<script>
+
+$(function() {
+
+		/**** YOU MAY MODIFY THE CODE BELOW ****/
+
+		function findLargest(numbers) {
+			
+
+			var i; 
+			var y=0; // value of largest number
+
+
+			// for each number in numbers
+			for(i=0; i<numbers.length; i++) {
+				if (numbers[i]>y) {  	//   check if each number is the greatest 
+					y = numbers[i]; 	// 	 update the value of largest number
+				}
+			}
+		
+			return y;  					// return the largest number
+		
+		}		
+
+		/**** STOP MODIFYING HERE. ****/
+
+		// THERE ARE TESTS BELOW - AGAIN: DO NOT EDIT!
+		largest = findLargest([234, 33, 14, 4]);
+		largest2 = findLargest([1, 2, 3]);
+		largest3 = findLargest([333]);
+		largest4 = findLargest([1, 5, 3]);
+
+
+		assert(largest == 234);
+		assert(largest2 == 3);
+		assert(largest3 == 333);
+		assert(largest4 == 5);
+});
+
+</script>
+

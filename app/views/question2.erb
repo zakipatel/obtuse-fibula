@@ -1,0 +1,54 @@
+<p>Write a function that takes in an array of values, and outputs every <strong>third</strong> element, line by line, by appending them into the Gray Box below. So you will skip the first two elements, append the third, skip the fourth and fifth, etc.<p>
+
+<p>Rules for what to output in the box:</p>
+<ul>
+	<li>If the value is the name of one of the instructors, print it in blue.</li>
+	<li>If the value is a number, print it italicized.</li>
+	<li>Otherwise, leave it unstyled.</li>
+</ul>
+</p>
+<p>Edit the page source to begin.</p>
+
+<div class='question'>
+		<h2 id="the_box">Gray Box</h2>
+</div>
+
+<script>
+
+$(function() {
+
+		function addItemsToGrayBox(items) {
+			/**** YOU MAY MODIFY THE CODE BELOW ****/
+			
+			var i;
+			for (i = 0; i < items.length; i++) {
+    			if (((i+1) % 3) == 0)   // every third element
+				{
+					if(items[i] in {'Monica':'', 'Don':'','Arvinder':''}) 
+					{
+						// if instructor, style color = blue
+						$	("#the_box").append("<p style='color:blue'>" + items[i] + "</p>"); 
+						
+					}
+
+					else if (typeof items[i] == 'number')
+						{
+						// if number, style = italics
+						$	("#the_box").append("<p style='font-style:italic'>" + items[i] + "</p>"); 
+						
+						}
+
+					else {   // leave unstyled
+						$	("#the_box").append("<p>" + items[i] + "</p>"); 
+					}
+
+				}
+			}	
+					
+			/**** STOP MODIFYING HERE. ****/
+		}
+
+		addItemsToGrayBox(["Toast", {key: "Value"}, "Monica", "Ointment", "Don", 817, "Lurk", ["Battery"], "Arvinder", 8, 345.3, "88", "a", "Rubber Duck"]);
+});
+
+</script>

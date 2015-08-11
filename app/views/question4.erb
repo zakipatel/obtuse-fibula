@@ -1,0 +1,55 @@
+<style>
+		/**** YOU MAY ADD OR MODIFY CSS BELOW ****/
+
+		
+		#redbox {
+			height: 100px;
+			width: 100px;
+			background: yellow;
+			/*margin-left: 0px;*/
+			/*margin-top: 0px;*/
+			/*transition: background-color 5s;*/
+			/*transition: margin-left 2s;*/
+			/*transition: margin-top 2s;*/
+		}
+		
+		.redbox-change {
+			/*height: 10px;*/
+			/*width: 10px;*/
+			background: red;
+		}
+		
+		/**** STOP MODIFYING HERE. ****/
+</style>
+
+
+<h2>Part 1 (10 points)</h2>
+<p>Make the red box such that when it is clicked, make it move towards the right by 300 pixels, down by 15 pixels, and slowly turn into a circle, over a course of 2 seconds.</p>
+<p> While this can be done with jQuery's animation capabilities, for simple transitions such as this, we should use <a href="http://www.css3.info/preview/css3-transitions/">CSS3 transitions</a>. To that end, <strong>make sure to use CSS3 transitions</strong> to achieve this. Yes you will still need to write some JS/jQuery since clicking the red-box DIV needs to trigger the CSS3 transition.</p>
+<p>Edit the page source to begin.</p>
+<hr/>
+<h2>Part 2 (10 BONUS points)</h2>
+<p>1 second after the animation is done running (so 3 seconds after the box is clicked), make the red area go back to its original position, but should turn blue. Once again, the box/circle should be slowly animating over a course of 2 seconds.</p>
+
+<!-- You shouldn't (need to) modify this question div or its contents -->
+<div class="question">
+		<h2>Red Box</h2>
+		<div id="redbox" class="redbox"></div>
+		<button id="the_button">The Button</button>
+</div>
+
+<script>
+	$(function() {
+
+			/**** YOU MAY ADD OR MODIFY CODE BELOW ****/
+
+			$("#the_button").click(function() { 
+				alert("hello");
+				$("#redbox").addClass("redbox-change"); 
+				 // $("#red-box").fadeOut();
+			});
+		
+			/**** STOP MODIFYING HERE. ****/
+	});
+
+</script>

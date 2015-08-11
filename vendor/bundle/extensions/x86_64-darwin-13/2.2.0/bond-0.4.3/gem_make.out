@@ -1,0 +1,12 @@
+/usr/local/opt/ruby/bin/ruby -r ./siteconf20150810-37644-1rxnyi5.rb extconf.rb
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+echo "This is a dummy extension"
+This is a dummy extension
+
+make "DESTDIR=" install
+echo "This is a dummy extension"
+This is a dummy extension

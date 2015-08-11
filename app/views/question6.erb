@@ -1,0 +1,39 @@
+<style type='text/css'>
+
+		/**** YOU MAY ADD OR MODIFY CSS BELOW ****/
+
+		#blue-box {
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+		}
+
+		/**** STOP MODIFYING HERE. ****/
+
+</style>
+
+<p>Write some jQuery to make the blue box fade out over a 1.5s duration when clicked. After it has completed fading out, it should wait one second, and fade back in quickly.</p>
+<p>Edit the page source to begin.</p>
+
+<div class="question">
+	<h2>Blue Box</h2>
+	<div id="blue-box"></div>
+</div>
+
+<script>
+	
+	/**** YOU MAY MODIFY THE CODE BELOW ****/
+
+	$(function() {
+			
+		
+		$("#blue-box").click(function() {
+			$("#blue-box").fadeOut(1500, function() { $("#blue-box").delay(1000).fadeIn("fast"); })
+		});
+
+	});
+
+	/**** STOP MODIFYING HERE. ****/
+	
+</script>
+

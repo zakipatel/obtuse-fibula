@@ -1,0 +1,42 @@
+<p>Modify the jQuery code running on this page such that when the user clicks "The Button", the browser prompts the user for their name, and then alerts the user with the text "You have clicked The Button, &lt;yourname&gt;."</p>
+<p>Make sure that nothing happens when "Not The Button" is clicked.</p>
+<p>Edit the page source to begin.</p>
+
+<div class='question'>
+	<!-- YOU MAY MODIFY THE HTML BELOW -->
+
+	<button id="the_button">The Button</button>
+
+	<label id="name_label" style="display:none"></label>
+
+	<br /><br />
+	<button id ="not_the_button">Not The Button</button>
+
+	<!-- STOP MODIFYING HERE. -->
+</div>
+
+<script>
+
+
+$(function() {
+	/**** YOU MAY MODIFY THE CODE BELOW ****/
+
+	 $("#the_button").click(function(){
+        // $(this).hide();
+        var name = window.prompt("What is your name?");
+        $('#name_label').text('You clicked The Button ' + name);
+        $('#name_label').show();
+
+    });
+
+	 $("#not_the_button").click(function(){
+        // alert( "Not the button clicked." );
+    });
+	
+
+	/**** STOP MODIFYING HERE. ****/
+});
+
+</script>
+
+

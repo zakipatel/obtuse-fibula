@@ -1,0 +1,92 @@
+<style>
+		/**** YOU MAY ADD OR MODIFY CSS BELOW ****/
+		
+		nav {
+  			background-color: #333;
+  			color: white;
+  			text-align: center;
+		}
+
+		nav > li {
+	    /* Nav bar level 1 */
+	    	display: inline-block;
+		    list-style-type: none;
+		   	vertical-align: top;
+		    padding: 1em;
+		}
+
+		ul > li  {
+		 /* Nav bar level 2 */
+			list-style-type: none;
+			text-align: left;
+			display: none;
+		 }
+
+		ul > li > a {
+		  /* Links in nav bar level 2, */
+			color: white;
+		 }
+
+		 nav li:hover {
+		 /* Hover on level 1, change bg-color, */
+		    background-color: #666;
+
+		}
+
+		 nav li:hover > ul > li {
+		 /* Hoever on level 1, show level 2, */
+		    display: block;
+		    
+		}
+		/**** STOP MODIFYING HERE. ****/
+		
+</style>
+
+<p>Convert the markup below into a nav menu that has a black background, white text, and the nested UL's become visible when a user mouses over the top level LI element, but disappear when the mouse moves off, like a traditional navigation menu.</p>
+</div>
+
+
+<div class="question">
+	<nav>
+		<li>Module 1
+			<ul>
+				<li><a href="#">Basic Ruby Syntax</a></li>
+				<li><a href="#">Methods</a></li>
+				<li><a href="#">OOP Principles</a></li>
+				<li><a href="#">Modules and Mixins</a></li>
+			</ul>
+		</li>
+		<li>Module 2
+			<ul>
+				<li><a href="#">SQL Syntax</a></li>
+				<li><a href="#">ORM</a></li>
+				<li><a href="#">ActiveRecord</a></li>
+				<li><a href="#">Migrations</a></li>
+				<li><a href="#">Sinatra</a></li>
+			</ul>
+		</li>
+		<li>Module 3
+			<ul>
+				<li><a href="#">Rails</a></li>
+				<li><a href="#">HTML5 Semantic Markup</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">AJAX</a></li>
+				<li><a href="#">APIs</a></li>
+			</ul>
+		</li>
+	</nav>
+</div>
+<script>
+
+$(function() {
+		/**** YOU MAY MODIFY THE CODE BELOW ****/
+
+		// On MouseOver of each Li
+		// Display: Show the associated <ul>
+
+		/**** STOP MODIFYING HERE. ****/
+});
+
+</script>
+
